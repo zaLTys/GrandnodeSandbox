@@ -1,3 +1,16 @@
+local mongo:
+net stop mongodb
+mongod --replSet rs0 --port 27017 --bind_ip_all --dbpath C:/data2
+
+mongo:
+rs.initiate({"_id" : "rs0","version" : 1,"term" : 0,"members" : [{"_id" : 0,"host" : "localhost:27017"}]})
+
+install
+ps@frontit.dk
+
+server: localhost
+database: admin
+
 <p align="center">
   <a href="https://grandnode.com/">
     <img src="https://grandnode.com/content/images/uploaded/Blog/githubnew1.jpg" alt="Logo">
